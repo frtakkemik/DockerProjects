@@ -1,0 +1,10 @@
+What is Bridge Networking?
+Bridge networking, container’ların kendi ağlarına sahip olmalarına ve Docker tarafından oluşturulan özel bir sanal ağ üzerinden haberleşmelerine olanak tanır.
+
+Varsayılan Ağı Kullanma:
+Docker’da bir container oluşturduğunuzda, genellikle bridge ağı kullanılır:
+docker network inspect bridge
+Container’lara Özel Ağ:
+Özel bir bridge ağı oluşturabilirsiniz:
+docker network create my-bridge-network
+docker run --network my-bridge-network my-web-app

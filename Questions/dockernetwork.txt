@@ -1,0 +1,21 @@
+How Docker Network Works?
+Docker ağ yapısı, container’lar arasında ve container ile host sistemi arasında iletişim kurmayı sağlar.
+
+Temel Docker Network Türleri:
+
+Bridge Network (Varsayılan):
+Her container, bridge ağında bir sanal Ethernet adaptörü ve IP adresi alır.
+docker0 adlı sanal bir bridge kullanır.
+Bridge ağı, yalnızca aynı host üzerinde çalışan container’lar arasında iletişimi sağlar.
+
+Host Network:
+Container doğrudan host’un ağ yığınını kullanır.
+Performans açısından avantajlıdır, ancak izole değildir.
+
+Overlay Network:
+
+Birden fazla Docker host’u arasında çalışan container’lar için kullanılır.
+Swarm modunda veya Kubernetes ile popülerdir.
+
+None Network:
+Container’a ağ atanmaz, tamamen izole çalışır.
