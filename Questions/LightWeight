@@ -1,0 +1,5 @@
+Neden 5 Konteyner 1.5 GB’lık Bir İmajla 7.5 GB Yer Kaplamaz?
+
+  Konteynerler katmanlı dosya sistemleri kullanır.
+  Aynı imajdan çalışan birden fazla konteyner, salt okunur (read-only) katmanları paylaşır.
+  Her konteyner yalnızca kendi değişikliklerini (write layer) saklar, bu yüzden ekstra alan tüketimi minimum olur.
