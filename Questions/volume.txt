@@ -1,0 +1,7 @@
+docker volume create my_volume // create
+docker volume ls // check
+docker run -d --name my_container -v my_volume:/data ubuntu sleep 1000 // ubuntu container running /data connection
+ 
+docker exec -it my_container bash
+echo "Hello, My first Volume" > /data/test.txt
+exit   
